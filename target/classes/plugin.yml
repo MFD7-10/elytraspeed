@@ -1,0 +1,11 @@
+name: elytraspeed
+version: '1.0'
+main: nftown.elytraspeed.Elytraspeed
+api-version: '1.20'
+commands:
+  elytraspeed-reload:
+    description: 重新加载插件配置
+permissions:
+  elytraspeed.bypass:
+    description: 允许绕过鞘翅速度限制
+    default: op

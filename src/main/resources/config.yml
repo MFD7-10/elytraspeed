@@ -1,0 +1,11 @@
+# 最大允许水平速度（米/秒）
+max-speed: 50.0
+
+# 是否启用插件
+enable-plugin: true
+
+# 是否显示速度限制警告
+show-warning: true
+
+# 速度警告消息
+warning-message: "&e你的水平速度已被限制！"
