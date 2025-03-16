@@ -40,17 +40,13 @@ public class Elytraspeed extends JavaPlugin implements Listener {
 
         Vector velocity = player.getVelocity();
 
-        // 计算水平速度分量（米/秒）
         Vector horizontal = new Vector(velocity.getX(), 0, velocity.getZ());
-        double currentSpeed = horizontal.length() * 20; // 转换为米/秒
-
+        double currentSpeed = horizontal.length() * 20; 
         if (currentSpeed > maxSpeed) {
-            // 计算速度缩放比例
             double scale = maxSpeed / currentSpeed;
 
-            // 创建新速度向量（保持方向，限制水平速度）
             Vector newVelocity = horizontal.multiply(scale)
-                    .setY(velocity.getY()); // 保持原有垂直速度
+                    .setY(velocity.getY());
 
             player.setVelocity(newVelocity);
 
@@ -60,7 +56,6 @@ public class Elytraspeed extends JavaPlugin implements Listener {
         }
     }
 
-    // 添加重载命令（在plugin.yml中添加elytraspeed.reload权限）
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
         if (cmd.getName().equalsIgnoreCase("elytraspeed-reload")) {
